@@ -24,7 +24,7 @@ function validate(email, password) {
 function send(res, status, type, body) {
   res.writeHead(status, {
     'Content-Type': type,
-    'Content-Security-Policy': "default-src 'self'"
+    'Content-Security-Policy': "default-src 'self'; style-src 'self' 'unsafe-inline'"
   });
   res.end(body);
 }
